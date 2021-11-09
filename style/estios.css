@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cabezera{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffbe8f;
+
+}
+.cabezera-texto{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cabezera-imagen{
+    width: 60%;
+    height: 100%;
+    border-radius: 0 0 0 40vh;
+    background-color: #FFD3B4;
+}
+.navegacion{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Dongle', sans-serif;
+    font-size: 4vh;
+    justify-content: center;
+}
+.navegacion a{
+    padding: 0 3vw 0 3vw;
+    color: black;
+    text-decoration: rgb(150, 0, 0) underline;
+}
+.cabezera-texto img{
+    width: 10vh;
+}
+.imagen-dos{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.imagen-dos img{
+    height: 100%;
+}
+.texto-principal{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto-principal h2{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    width: 50%;
+    font-size: 5vh;
+    margin-left: 4vw;
+}
+.texto-principal p{
+    font-family: 'Dongle', sans-serif;
+    font-size: 4vh;
+    margin-left: 4vw;
+}
+.navegacion-imagen{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 2em;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+main{
+    background-color: #ffbe8f;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.section-uno{
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    margin: 10vh 0;
+}
+.article-imagen{
+    width: 30%;
+    display: flex;
+}
+.article-texto{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.texto-article{
+    width: 70%;
+}
+.texto-article h2{
+    font-size: 5vh;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: rgb(150, 0, 0);
+}
+.texto-article p{
+font-size: 2vh;
+font-family: 'Mochiy Pop P One', sans-serif;
+text-align: justify;
+padding-top: 2vh;
+}
