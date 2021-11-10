@@ -47,12 +47,18 @@ function filtroStock(array) {
             articulos.forEach(articulo => {
                 if(articulo.tipo === `${tipo}`){        
                     bodyStore.innerHTML += `
-                    <div class="">
-                    <img src= ${articulo.imagen}>
-                    <p>Nombre: ${articulo.nombre}</p>
-                    <p>Precio: ${articulo.precio}</p>
-                    <p>Stock: ${articulo.stock <= 5 ? "Ultimas unidades!" : articulo.stock}</p>
-                    <button>Comprar</button>
+                    <div class="col">
+                        <div class="card">
+                            <img src= ${articulo.imagen}>
+                            <div class="card-body">
+                                <p>Nombre: ${articulo.nombre}</p>
+                                <p>Stock: ${articulo.stock <= 5 ? "Ultimas unidades!" : articulo.stock}</p>
+                                <div class="precio-stock">
+                                    <p>$${articulo.precio}</p>
+                                    <button>Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     `
                 }

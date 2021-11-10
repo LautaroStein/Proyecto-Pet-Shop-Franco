@@ -224,37 +224,38 @@ background-color: #FFD3B4;
     position: absolute;
     width: 300px;
     height: 187px;
-    top: 20px;
-    left: 10px;
-    right: 10px;
     background-size: cover;
-    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    box-shadow:inset 0 0 0 2000px rgba(197, 197, 197, 0.342);
     display: flex;
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 span {
     margin: auto;
     font-size: 2rem;
 }
 .carousel__face:nth-child(1) {
-    transform: rotateY(  0deg) translateZ(430px); 
+    transform: rotateY(  51.42deg) translateZ(360px); 
 }
 .carousel__face:nth-child(2) { 
-    transform: rotateY( 40deg) translateZ(430px); 
+    transform: rotateY( 102.84deg) translateZ(360px); 
 }
 .carousel__face:nth-child(3) {
-    transform: rotateY( 80deg) translateZ(430px); 
+    transform: rotateY( 154.26deg) translateZ(360px); 
 }
 .carousel__face:nth-child(4) {
-    transform: rotateY(120deg) translateZ(430px); 
+    transform: rotateY(205.68deg) translateZ(360px); 
 }
 .carousel__face:nth-child(5) { 
-    transform: rotateY(160deg) translateZ(430px); 
+    transform: rotateY(257.1deg) translateZ(360px); 
 }
 .carousel__face:nth-child(6) { 
-    transform: rotateY(200deg) translateZ(430px); 
+    transform: rotateY(308.52deg) translateZ(360px); 
 }
 .carousel__face:nth-child(7) { 
-    transform: rotateY(240deg) translateZ(430px); 
+    transform: rotateY(360deg) translateZ(360px); 
 }
 
 @keyframes rotate360 {
@@ -267,8 +268,66 @@ span {
 }
 .main-articulos{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-contenedor{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 .carousel-contenedor{
     height: 50vh;
     width: 100%;
+    background-color: #FFD3B4;
+    border-radius:0 0 20vh 20vh ;
+}
+.unidades{
+    margin-bottom: 0;
+    margin-top: 1em;
+    padding-top: 1em;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    background-color: #FFD3B4;
+    border-radius: 50vh 50vh 0 0 ;
+}
+.articulos{
+    padding-top: 2em;
+    display: flex;
+    padding-bottom: 2em;
+}
+.precio-stock{
+    display: flex;
+    justify-content: space-between;
+}
+.precio-stock p{
+    font-weight: 800;
+}
+.card-body{
+    font-family:'Dongle', sans-serif ;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card{
+    background-color:#FFD3B4; 
+    border-radius: 2em;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.158);
+    height: 100%;
+}
+.card img{
+    border-radius: 2em;
+    height: 30vh;
+}
+button{
+    border: none;
+    border-radius: 2vh;
+    padding: 0.2em;
+    background-color: #FF8B96;
+    color: white;
+}
+button:hover{
+    color: black;
 }
