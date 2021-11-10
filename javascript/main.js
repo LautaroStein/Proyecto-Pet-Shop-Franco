@@ -44,32 +44,19 @@ function filtroStock(array) {
 
     function inyectarDiv (articulos, id, tipo) {
             let bodyStore = document.querySelector(`#${id}`)
-            let mensajeStock = "Últimas unidades!"
             articulos.forEach(articulo => {
-                if(articulo.stock <= 5){
                 if(articulo.tipo === `${tipo}`){        
                     bodyStore.innerHTML += `
                     <div class="">
                     <img src= ${articulo.imagen}>
                     <p>Nombre: ${articulo.nombre}</p>
                     <p>Precio: ${articulo.precio}</p>
-                    <p>Stock: ${mensajeStock}</p>
+                    <p>Stock: ${articulo.stock <= 5 ? "Ultimas unidades!" : articulo.stock}</p>
+                    <button>Comprar</button>
                     </div>
                     `
                 }
-            } else { 
-                if(articulo.tipo === `${tipo}`){        
-                bodyStore.innerHTML += `
-                <div class="">
-                <img src= ${articulo.imagen}>
-                <p>Nombre: ${articulo.nombre}</p>
-                <p>Precio: ${articulo.precio}</p>
-                <p>Stock: ${articulo.stock}</p>
-                </div>
-                `
-            }
-        }
-    })       
+            })
     }
 
 
