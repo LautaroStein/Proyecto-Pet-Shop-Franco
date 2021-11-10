@@ -8,7 +8,6 @@ fetch(endpoint,)
 
 
 function myProgram(data){
-    
     let articulos = data.response
     console.table(articulos)
 
@@ -42,9 +41,10 @@ function filtroStock(array) {
         inyectarDiv(articulos, "medicamentos", "Medicamento")
     }
 
-    function inyectarDiv (articulos, id, tipo) {
+    function inyectarDiv (articuloss, id, tipo) {
             let bodyStore = document.querySelector(`#${id}`)
-            articulos.forEach(articulo => {
+            bodyStore.innerHTML=""
+            articuloss.forEach(articulo => {
                 if(articulo.tipo === `${tipo}`){        
                     bodyStore.innerHTML += `
                     <div class="col">
@@ -66,6 +66,19 @@ function filtroStock(array) {
     }
 
 
+    const price = document.querySelector("input[type='number']")
+price.addEventListener("change", valor => {
+    let precioValue = valor.target.value
+    let array = [...articulos];
+    let arrayFiltrado 
+    console.log(precioValue)
+    array.forEach(element =>{
+        if(element.precio <= precioValue ){
+            arrayFiltrado = array.filter( elemento => elemento.precio <= precioValue)
+        }
+    })
+    inyectarDiv(arrayFiltrado, "medicamentos", "Medicamento")
+})
 
 
 
