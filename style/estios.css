@@ -235,6 +235,7 @@ background-color: #FFD3B4;
 span {
     margin: auto;
     font-size: 2rem;
+    text-shadow: 2px 2px 2px  black;
 }
 .carousel__face:nth-child(1) {
     transform: rotateY(  51.42deg) translateZ(360px); 

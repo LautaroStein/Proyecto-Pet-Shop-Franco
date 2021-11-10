@@ -34,7 +34,7 @@ function filtroStock(array) {
     
     // ARMAR FUNCION MOSTRAR ARTICULOS POR MEDICAMENTO Y JUGETE :: ESTEBAN Y MIGUEL
     
-    if(document.title == "Franco || Jugetes"){
+    if(document.title == "Franco || Juguetes"){
         inyectarDiv(articulos, "articulosJuguetes", "Juguete")
     }
     else {
