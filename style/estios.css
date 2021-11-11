@@ -127,10 +127,9 @@ padding-top: 2vh;
 }
 .pie-pagina{
     width: 100%;
-    min-height: 30vh;
-    /* background-color: #FFD3B4; */
     display: flex;
     flex-wrap: wrap;
+    min-height: 30vh;
 }
 .pie-fondo-uno{
     width: 60%;
@@ -146,6 +145,7 @@ background-color: #FFD3B4;
     border-radius: 0 50% 0 0;
     background-color: #FFD3B4;
     display: flex;
+    align-items: center;
 }
 .pie-iconos{
     width: 100%;
@@ -158,9 +158,12 @@ background-color: #FFD3B4;
 .img-pie-logo{
     display: flex;
     width: 35%;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
 }
 .img-pie-logo img{
-    width: 100%;
+    width: 50%;
 }
 .pie-nosotros{
     display: flex;
@@ -171,6 +174,7 @@ background-color: #FFD3B4;
     text-align: justify;
     align-items: center;
     justify-content: space-evenly;
+    height: 80%;
 }
 .pie-nosotros h3{
     font-size: 3vh;
@@ -188,6 +192,7 @@ background-color: #FFD3B4;
     justify-content: space-evenly;
     width: 35%;
     font-size: 0.90em;
+    height: 60%;
 }
 .pie-nav a{
     color: black;
@@ -297,6 +302,7 @@ span {
     padding-top: 2em;
     display: flex;
     padding-bottom: 2em;
+    width: 75%;
 }
 .precio-stock{
     display: flex;
@@ -320,7 +326,7 @@ span {
 }
 .card img{
     border-radius: 2em;
-    height: 30vh;
+    height: 50vh;
 }
 button{
     border: none;
@@ -331,4 +337,26 @@ button{
 }
 button:hover{
     color: black;
+}
+.contenedor-mercado{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.contenedor-mercado-filtro{
+    width: 20%;
+    padding-top: 2em;
+}
+.form-check-input:checked {
+    background-color: #FF8B96;
+    border-color: #FF8B96;
+}
+.form-check-input{
+    background-color:#FFD3B4 ;
+}
+.form-check{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
