@@ -6,8 +6,6 @@ fetch(endpoint, )
     .then(datas => {
         myProgram(datas)
     })
-
-
 function myProgram(data){
     let articulos = data.response
     console.table(articulos)
@@ -27,7 +25,9 @@ function myProgram(data){
         array.forEach(element => {
             carousel.innerHTML += `
             <div class="carousel__face" style= "background-image: url(${element.imagen});">
-                <span>${element.nombre} </span>
+
+            <span class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">${element.nombre}</span>
+
             </div>
             `
         })
@@ -50,7 +50,7 @@ function myProgram(data){
                     <img src= ${articulo.imagen}>
                     <div class="card-body">
                         <p>Nombre: ${articulo.nombre}</p>
-                        <p>Stock: ${articulo.stock <= 5 ? "Ultimas unidades!" : articulo.stock}</p>
+                        <p>Stock: ${articulo.stock <= 5 ? `<span class="ultimas-unidades">Ultimas unidades!</span>` : articulo.stock}</p>
                         <div class="precio-stock">
                             <p>$${articulo.precio}</p>
                             <button>Agregar al Carrito</button>
@@ -67,8 +67,8 @@ function myProgram(data){
 
 
 
+    
     let articulosCopia = [...articulos]
-
     mayor.addEventListener("change", () => {
         if (mayor.checked === true) {
             const artMayor = articulosCopia.sort((a, b) => {
@@ -121,31 +121,12 @@ price.addEventListener("change", valor => {
     console.log(arrayFiltrado)
     let filtroCantidad 
     arrayFiltrado.forEach(() => { 
-        // if(e.tipo === `${chamber}`){
             return filtroCantidad = arrayFiltrado.filter(element => element.tipo === `${chamber}`)
-        // }
     })
     console.log(filtroCantidad.length);
     ResultadoValor.innerHTML = `${filtroCantidad.length} Articulos `
     inyectarDiv(arrayFiltrado)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // FINAL DEL MYPROGRAM
 }
+
+
