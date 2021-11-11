@@ -123,3 +123,11 @@ font-family: 'Mochiy Pop P One', sans-serif;
 text-align: justify;
 padding-top: 2vh;
 }
+df-messenger {
+    --df-messenger-bot-message: #b8c4ee;
+    --df-messenger-button-titlebar-color: #ffbe8f;
+    --df-messenger-chat-background-color: #fafafa;
+    --df-messenger-font-color: rgb(5, 5, 5);
+    --df-messenger-send-icon: #878fac;
+    --df-messenger-user-message: #82bd7c;
+   }
