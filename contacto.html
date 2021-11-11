@@ -16,9 +16,12 @@
                 <h1>Franco</h1>
             </div>
             <div class="texto-principal">
-                <h2>Contacto</h2>
+                <div>
+                <h2>Contacto</h2> 
+                </div>
                 <p>Encontranos en Rio de Janeiro 300</p>
             </div>
+               
         </div>
         <div class="cabezera-imagen">
             <nav class="navegacion">
@@ -34,9 +37,73 @@
     </header>
     <main>
         <!-- Carlos Valerio Centeno Trabaja aqui -->
-        <form action="">
+        <div class="fondo-form" id="borrar">
+                    
+                <form  class="formulario" method="get" id="formulario">
+                    <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" placeholder="Nombre" name="nombre" id="nombre" required>
+                     </div>
 
-        </form>
+                     <div>
+                     <label for="apellido">Apellido</label>
+                     <input type="text" placeholder="Apellido" id="apellido" name="apellido" required>
+                     </div>
+                
+                
+                    <div class="margentlf">
+                    <label for="tlf">Tlf:</label>
+                    <input type="text" placeholder="Telefono" id="tlf" name="tlf" required>
+                    </div>
+
+                    <div class="margencorreo">
+                    <label for="correo">Correo</label>
+                    <input type="email" placeholder="Correo" id="correo" name="correo" required>
+                    </div>
+
+
+                    <div class="margen">
+                    <p>Que mascota tienes?</p>
+                    </div>
+
+                    <div class="margen mascota">
+                       <input  type="radio" name="mascota" value="Perro" id="perro"><label class="radio perro" for="perro">Perro</label>
+                       <input  type="radio" name="mascota" value="gato" id="gato"><label class="radio" for="gato">Gato</label>
+                       <input  type="radio" name="mascota" value="otro" id="otro"><label class="radio otro" for="otro">Otro</label>
+                    </div>
+
+                    <div class="margen radio">
+                    <p>Dejanos aqui tu consulta</p>
+                    <textarea name="mensaje" id=""placeholder="Mensaje" required></textarea>
+                    </div>
+
+
+                    <div class="btn open">
+                    <input type="submit" id="enviar" value="Enviar">
+                    </div>
+
+                    <div class="modal-conteiner" id="modal-conteiner">
+                        <did class="modal">
+                            <h2>Gracias por contactarnos</h2>
+                            <button type="submit" class="close" id="close">Cerrar</button>
+                        </did>
+   
+                    </div>
+   
+                      
+                 </form>
+                 
+        </div>
+
+       
+
+        <div class="map">
+            <iframe class="fondo-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6869258109577!2d-58.
+            43257228591401!3d-34.612077380457265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b
+            cca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!
+            1ses-419!2sar!4v1636480253115!5m2!1ses-419!2sar" width="600" height="450" style="border:0;
+            " allowfullscreen="" loading="lazy"></iframe>
+            </div>
     </main>
     <script src="./javascript/main.js"></script>
 </body>

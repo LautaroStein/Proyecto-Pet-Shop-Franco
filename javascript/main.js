@@ -27,3 +27,39 @@ console.table(articulos)
 
 
 }
+
+// // validar formularios
+
+let enviar = document.getElementById("enviar");
+let modal = document.getElementById("modal-conteiner");
+let closes = document.getElementById("close");
+
+
+
+   function mostrarModal(e) {
+       e.preventDefault();
+       
+       enviar.addEventListener('click', () =>{
+       modal.classList.add('show');
+      })
+
+
+      closes.addEventListener('click', () =>{
+          modal.classList.remove('show');
+      })
+
+      e.target[0].value = " "
+      e.target[1].value = " "
+      e.target[2].value = " "
+      e.target[3].value = " "
+      e.target[7].value = " "
+      
+    }    
+   
+   formulario.addEventListener('submit',mostrarModal);
+    
+
+      
+        
+
+
