@@ -328,14 +328,18 @@ span {
     border-radius: 2em;
     height: 50vh;
 }
-button{
+.button{
     border: none;
     border-radius: 2vh;
     padding: 0.2em;
     background-color: #FF8B96;
     color: white;
+    text-decoration: none;
+    padding: 0 0.5em 0 0.5em;
+    display: flex;
+    align-items: center;
 }
-button:hover{
+.button:hover{
     color: black;
 }
 .contenedor-mercado{
