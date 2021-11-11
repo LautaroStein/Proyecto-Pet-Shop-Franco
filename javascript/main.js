@@ -53,7 +53,7 @@ function myProgram(data){
                         <p>Stock: ${articulo.stock <= 5 ? `<span class="ultimas-unidades">Ultimas unidades!</span>` : articulo.stock}</p>
                         <div class="precio-stock">
                             <p>$${articulo.precio}</p>
-                            <button>Agregar al Carrito</button>
+                            <a href="#" data-name="${articulo.nombre}" data-price="${articulo.precio}" class="add-to-cart btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -128,5 +128,3 @@ price.addEventListener("change", valor => {
     inyectarDiv(arrayFiltrado)
 })
 }
-
-
