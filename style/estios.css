@@ -515,3 +515,11 @@ border-bottom: 2px solid #ff7a1b;
     color:rgb(150, 0, 0);
     text-shadow: 0 0 0 ;
 }
+df-messenger {
+    --df-messenger-bot-message: #b8c4ee;
+    --df-messenger-button-titlebar-color: #ffbe8f;
+    --df-messenger-chat-background-color: #fafafa;
+    --df-messenger-font-color: rgb(5, 5, 5);
+    --df-messenger-send-icon: #878fac;
+    --df-messenger-user-message: #82bd7c;
+   }
