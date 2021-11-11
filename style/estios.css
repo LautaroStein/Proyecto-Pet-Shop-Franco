@@ -127,10 +127,9 @@ padding-top: 2vh;
 }
 .pie-pagina{
     width: 100%;
-    min-height: 30vh;
-    /* background-color: #FFD3B4; */
     display: flex;
     flex-wrap: wrap;
+    min-height: 30vh;
 }
 .pie-fondo-uno{
     width: 60%;
@@ -146,6 +145,7 @@ background-color: #FFD3B4;
     border-radius: 0 50% 0 0;
     background-color: #FFD3B4;
     display: flex;
+    align-items: center;
 }
 .pie-iconos{
     width: 100%;
@@ -158,9 +158,12 @@ background-color: #FFD3B4;
 .img-pie-logo{
     display: flex;
     width: 35%;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
 }
 .img-pie-logo img{
-    width: 100%;
+    width: 50%;
 }
 .pie-nosotros{
     display: flex;
@@ -171,6 +174,7 @@ background-color: #FFD3B4;
     text-align: justify;
     align-items: center;
     justify-content: space-evenly;
+    height: 80%;
 }
 .pie-nosotros h3{
     font-size: 3vh;
@@ -188,6 +192,7 @@ background-color: #FFD3B4;
     justify-content: space-evenly;
     width: 35%;
     font-size: 0.90em;
+    height: 60%;
 }
 .pie-nav a{
     color: black;
@@ -235,6 +240,7 @@ background-color: #FFD3B4;
 span {
     margin: auto;
     font-size: 2rem;
+    text-shadow: 2px 2px 2px  black;
 }
 .carousel__face:nth-child(1) {
     transform: rotateY(  51.42deg) translateZ(360px); 
@@ -296,6 +302,7 @@ span {
     padding-top: 2em;
     display: flex;
     padding-bottom: 2em;
+    width: 75%;
 }
 .precio-stock{
     display: flex;
@@ -319,7 +326,7 @@ span {
 }
 .card img{
     border-radius: 2em;
-    height: 30vh;
+    height: 50vh;
 }
 button{
     border: none;
@@ -330,4 +337,177 @@ button{
 }
 button:hover{
     color: black;
+}
+.contenedor-mercado{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.contenedor-mercado-filtro{
+    width: 20%;
+    padding-top: 2em;
+}
+.form-check-input:checked {
+    background-color: #FF8B96;
+    border-color: #FF8B96;
+}
+.form-check-input{
+    background-color:#FFD3B4 ;
+}
+.form-check{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 7vh;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+    font-family:'Dongle', sans-serif ;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+.texto-maximo{
+    width: 100%;
+    border-radius: 0.5em;
+    height: 5vh;
+}
+
+
+/* fondo para formulario */
+.fondo-form{
+    background-color: rgb(255, 255,255,0.3);  
+    backdrop-filter: blur(20);
+    border: solid 1px rgba(255, 255,255,0.5); 
+    padding: 2rem ;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+}
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    background: #fff3ea;
+    border: none;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    display: block;
+}
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus{
+border-bottom: 2px solid #ff7a1b;
+}
+.formulario textarea{
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 400px;
+    max-width: 400px;
+}
+.fondo-map{
+    height: 400px;
+    width: 400px; 
+    margin-top: 10rem;
+    margin-left: 3rem;
+    border-radius: 20px;
+}
+.margen{
+    padding-bottom: 2rem;
+}
+.formulario input[type="submit"]{
+    width: 100px;
+    margin: 0 auto;
+    background: rgba(248, 140, 39, 0.575);
+    border: 1px solid #ffbe8f;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #361903;
+    font-size: 18px;
+}
+.formulario input[type="submit"]:hover {
+    background: #ff6c03;
+    color: #fff;
+}
+.formulario input[type="radio"]{
+    display: none;
+
+}
+.formulario input[type="radio"]:checked +.radio{
+    background: rgba(248, 140, 39, 0.575);
+
+}
+.formulario .mascota{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.formulario .mascota .radio{
+    background: rgba(255, 255,255,0.5);
+    color:black;
+    padding: 10px;
+    text-align: center;
+    width: 32.5%;
+}
+.formulario .perro{
+    border-radius: 5px 0 0 5px;
+}
+.formulario .mascota .otro{
+    border-radius: 0 5px 5px 0;
+}
+.error{
+    display: none;
+    border-radius: 3px;
+    background: #ff2323;
+    color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 1rem;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+/* modal */
+.modal-conteiner{
+    display: flex;
+    background-color:#FFD3B4;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 30%;
+    left: 40%;
+    text-align: center;
+    border-radius: 15px;
+    opacity: 0;
+}
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+.modales{
+    /* background-color: rgba(241, 165, 66, 0.5); */
+    border-radius: 20px;
+    color: rgb(255, 77, 45);
+    font-size: 30px;
+    box-shadow: 0 6px 5px;
+    padding: 1rem;
+}
+.close{
+    width: 100px;
+    margin: 0 auto;
+    background: rgba(248, 140, 39, 0.575);
+    border: 1px solid #ffbe8f;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #361903;
+    font-size: 18px;
+}
+.ultimas-unidades{
+    color:rgb(150, 0, 0);
+    text-shadow: 0 0 0 ;
 }

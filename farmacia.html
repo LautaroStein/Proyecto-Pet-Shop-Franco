@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/estios.css">
     <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,17 +30,37 @@
         <div class="cabezera-imagen">
             <nav class="navegacion">
                 <a href="./index.html">Inicio</a>
-                <a href="./contacto.html">Contactenos</a>
                 <a href="./farmacia.html">Farmacia</a>
-                <a href="./jugetes.html">Jugetes</a>
-                <a href="#"><i class="bi bi-cart3"></i></a>
-            </nav>
-            <div class="imagen-dos">
-                <img src="./img/Niño.png" alt="Niño corriendo">
-            </div>
+                <a href="./jugetes.html">Juguetes</a>
+                <a href="./contacto.html">Contactenos</a>
+                <div class="col">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+        </div>
+        </nav>
+        <div class="imagen-dos">
+            <img src="./img/Farmacia.png" alt="Niño corriendo">
+        </div>
         </div>
     </header>
     <main class="main-articulos">
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="main-contenedor">
             <p class="unidades">Ultimas Unidades en Stock!</p>
             <div class="carousel-contenedor">
@@ -46,48 +69,83 @@
                     </div>
                 </div>
             </div>
-            <div id="articulos" class="articulos row row-cols-1 row-cols-md-3 g-4">
+            <div class="contenedor-mercado">
+                <div class="contenedor-mercado-filtro">
+                    <div>
+                        <h3>Farmacia</h3>
+                        <p id="modificarValor">8 articulos</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="mayor" name="articulo">
+                        <label for="mayor"> Mayor a Menor</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="menor" name="articulo">
+                        <label for="menor"> Menor a Mayor</label>
+                    </div>
+                    <div>
+                        <h3>Precio</h3>
+                        <p>Indicanos un rango de precio maximo</p>
+                    </div>
+                    <input class="texto-maximo" type="number" id="price" placeholder="Precio Maximo" min=200 " max="2500 " step="50 ">
+                </div>
+                <div id="articulos " class="articulos row row-cols-1 row-cols-md-2 g-4 ">
+                </div> 
             </div>
-            <div>
-                <input type="checkbox" id="mayor">
-                <label for="mayor"> Mayor a Menor</label>
-            </div>
-            <div>
-                <input type="checkbox" id="menor">
-                <label for="menor"> Menor a Mayor</label>
-            </div>
-        </div>
-    </main>
-    <footer class="pie-pagina">
-        <div class="pie-fondo-uno">
-            <div class="pie-texto">
-                <div class="pie-nosotros">
+            <div class="modal fade " id="cart " tabindex="-1 " role="dialog " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                <div class="modal-dialog modal-lg " role="document ">
+                  <div class="modal-content ">
+                    <div class="modal-header ">
+                      <h5 class="modal-title " id="exampleModalLabel ">Cart</h5>
+                      <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+                        <span aria-hidden="true ">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body ">
+                      <table class="show-cart table ">
+                        
+                      </table>
+                      <div>Total price: $<span class="total-cart "></span></div>
+                    </div>
+                    <div class="modal-footer ">
+                      <button type="button " class="btn btn-secondary " data-dismiss="modal ">Close</button>
+                      <button type="button " class="btn btn-primary ">Order now</button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+        </main>
+        <footer class="pie-pagina ">
+        <div class="pie-fondo-uno ">
+            <div class="pie-texto ">
+                <div class="pie-nosotros ">
                     <h3>Nosotros</h3>
                     <p>Empresa familiar creada en el año 2010 que tiene como misión ayudar a las mascotas y a sus dueños a convivir mejor.</p>
                 </div>
-                <div class="img-pie-logo">
-                    <img src="./img/logo.jpg" alt="Logo">
+                <div class="img-pie-logo ">
+                    <img src="./img/logo.jpg " alt="Logo ">
                 </div>
-                <div class="pie-nav">
-                    <a href="./index.html">Inicio</a>
-                    <a href="./contacto.html">Contactenos</a>
-                    <a href="./farmacia.html">Farmacia</a>
-                    <a href="./jugetes.html">Jugetes</a>
+                <div class="pie-nav ">
+                    <a href="./index.html ">Inicio</a>
+                    <a href="./contacto.html ">Contactenos</a>
+                    <a href="./farmacia.html ">Farmacia</a>
+                    <a href="./jugetes.html ">Jugetes</a>
                 </div>
             </div>
         </div>
-        <div class="pie-fondo-dos">
-            <div class="pie-iconos">
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-messenger"></i></a>
-                <a href=""><i class="bi bi-whatsapp"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-twitter"></i></a>
+        <div class="pie-fondo-dos ">
+            <div class="pie-iconos ">
+                <a href=" "><i class="bi bi-facebook "></i></a>
+                <a href=" "><i class="bi bi-messenger "></i></a>
+                <a href=" "><i class="bi bi-whatsapp "></i></a>
+                <a href=" "><i class="bi bi-instagram "></i></a>
+                <a href=" "><i class="bi bi-twitter "></i></a>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+    <script src="./javascript/main.js "></script>
+    <script src="./javascript/jquery.min.js "></script>
 </body>
 
 </html>
