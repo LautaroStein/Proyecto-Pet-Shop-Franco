@@ -105,6 +105,9 @@ main{
     width: 30%;
     display: flex;
 }
+.article-imagen img{
+    width: 100%;
+}
 .article-texto{
     width: 70%;
     display: flex;
@@ -169,7 +172,6 @@ background-color: #FFD3B4;
     display: flex;
     width: 30%;
     flex-direction: column;
-    flex-wrap: wrap;
     padding: 1em;
     text-align: justify;
     align-items: center;
@@ -386,7 +388,7 @@ span {
     padding: 2rem ;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
 }
 .formulario input[type="text"],
 .formulario input[type="email"],
@@ -515,6 +517,14 @@ border-bottom: 2px solid #ff7a1b;
     color:rgb(150, 0, 0);
     text-shadow: 0 0 0 ;
 }
+.modal-title{
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+.total-cart{
+    text-shadow: 0 0 0;
+    font-family:'Dongle', sans-serif ;
+    font-size: 2em;
+}
 df-messenger {
     --df-messenger-bot-message: #b8c4ee;
     --df-messenger-button-titlebar-color: #ffbe8f;
@@ -523,3 +533,54 @@ df-messenger {
     --df-messenger-send-icon: #878fac;
     --df-messenger-user-message: #82bd7c;
    }
+@media (max-width: 977px) {
+    .texto-article h2{
+        font-size: 3vh;
+    }
+    .texto-article p{
+        font-size: 1.7vh;
+    }
+}
+@media (max-width: 875px) {
+    .imagen-dos img {
+        height: 70%;
+    }
+    .texto-principal h2 {
+        font-family: 'Mochiy Pop P One', sans-serif;
+        width: 50%;
+        font-size: 4vh;
+        margin-left: 3vw;
+    }
+    .texto-principal p {
+        font-family: 'Dongle', sans-serif;
+        font-size: 3vh;
+        margin-left: 3vw;
+    }
+    .texto-principal {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .pie-iconos {
+        font-size: 2.5em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .pie-nosotros p {
+        font-family: 'Mochiy Pop P One', sans-serif;
+        font-size: 0.70em;
+    }
+    .article-imagen img{
+        height: 60%;
+    }
+    .article-imagen{
+        display: flex;
+        align-items: center;
+    }
+}

@@ -237,7 +237,21 @@ var shoppingCart = (function() {
   // ***************************************** 
   // Add item
   $('.add-to-cart').click(function(event) {
-    event.preventDefault();
+    event.preventDefault();const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      Toast.fire({
+        icon: 'success',
+        title: 'Signed in successfully'
+      })
     var name = $(this).data('name');
     var price = Number($(this).data('price'));
     shoppingCart.addItemToCart(name, price, 1);
