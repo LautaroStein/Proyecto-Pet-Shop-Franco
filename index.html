@@ -27,6 +27,15 @@
           <a href="./farmacia.html">Farmacia</a>
           <a href="./jugetes.html">Jugetes</a>
           <a href="./contacto.html">Contactenos</a>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="dark-mode">
+              <input type="checkbox" id="dark-mode"/>
+              <div class="slider">
+                <svgOfSun />
+                <svgOfMoon />
+              </div>
+            </label>
+          </div>
         </nav>
         <div class="imagen-dos">
           <img src="./img/Niño.png" alt="Niño corriendo" />
@@ -47,44 +56,45 @@
                     </div>
                 </div>
             </article>
-            <div>
-              <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-      <df-messenger
-        chat-icon="https:&#x2F;&#x2F;cdn-icons-png.flaticon.com&#x2F;512&#x2F;2829&#x2F;2829757.png"
-        intent="WELCOME"
-        chat-title="Branquito"
-        agent-id="59b1d928-3910-4bca-85a6-19f89405f072"
-        language-code="es"
-          ></df-messenger>
-            </div> 
-    </main>
-    <footer class="pie-pagina">
-        <div class="pie-fondo-uno">
-            <div class="pie-texto">
+          </main>
+          <footer class="pie-pagina">
+            <div class="pie-fondo-uno">
+              <div class="pie-texto">
                 <div class="pie-nosotros">
                     <h3>Nosotros</h3>
                     <p>Empresa familiar creada en el año 2010 que tiene como misión ayudar a las mascotas y a sus dueños a convivir mejor.</p>
-                </div>
-                <div class="img-pie-logo">
+                  </div>
+                  <div class="img-pie-logo">
                     <img src="./img/logo.jpg" alt="Logo">
                 </div>
                 <div class="pie-nav">
-                    <a href="./index.html">Inicio</a>
-                    <a href="./contacto.html">Contactenos</a>
-                    <a href="./farmacia.html">Farmacia</a>
-                    <a href="./jugetes.html">Jugetes</a>
+                  <a href="./index.html">Inicio</a>
+                  <a href="./contacto.html">Contactenos</a>
+                  <a href="./farmacia.html">Farmacia</a>
+                  <a href="./jugetes.html">Jugetes</a>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="pie-fondo-dos">
-            <div class="pie-iconos">
+            <div class="pie-fondo-dos">
+              <div class="pie-iconos">
                 <a href=""><i class="bi bi-facebook"></i></a>
                 <a href=""><i class="bi bi-messenger"></i></a>
                 <a href=""><i class="bi bi-whatsapp"></i></a>
                 <a href=""><i class="bi bi-instagram"></i></a>
                 <a href=""><i class="bi bi-twitter"></i></a>
+              </div>
             </div>
-        </div>
-    </footer>
+          </footer>
+          <div class="brankito">
+            <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="https:&#x2F;&#x2F;cdn-icons-png.flaticon.com&#x2F;512&#x2F;2829&#x2F;2829757.png"
+      intent="WELCOME"
+      chat-title="Branquito"
+      agent-id="59b1d928-3910-4bca-85a6-19f89405f072"
+      language-code="es"
+        ></df-messenger>
+          </div> 
+    <script src="./javascript/darkmode.js"></script>
   </body>
 </html>

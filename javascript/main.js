@@ -249,8 +249,7 @@ var shoppingCart = (function() {
         }
       })
       Toast.fire({
-        icon: 'success',
-        title: 'Signed in successfully'
+        title: 'Agregado al carrito'
       })
     var name = $(this).data('name');
     var price = Number($(this).data('price'));
@@ -316,4 +315,12 @@ var shoppingCart = (function() {
   });
   
   displayCart();
+  document.querySelector("#compraya").addEventListener("click", () => {
+    Swal.fire(
+      'Te quitamos todo tu dinero!',
+    )
+    document.querySelector(".show-cart").innerHTML = ""
+    document.querySelector(".total-cart").innerHTML = ""
+  })
+  
 }

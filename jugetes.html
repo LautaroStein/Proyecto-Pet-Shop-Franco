@@ -34,6 +34,15 @@
                 <a href="./jugetes.html">Juguetes</a>
                 <a href="./contacto.html">Contactenos</a>
                 <a href="#" data-toggle="modal" data-target="#cart"><i class="bi bi-cart3"><span class="total-count"></span></i></a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="dark-mode">
+                      <input type="checkbox" id="dark-mode"/>
+                      <div class="slider">
+                        <svgOfSun />
+                        <svgOfMoon />
+                      </div>
+                    </label>
+                  </div>
             </nav>
             <div class="imagen-dos">
                     <img src="./img/Jugetes.png" alt="Niño corriendo">
@@ -74,27 +83,25 @@
               </div> 
           </div>
           <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <table class="show-cart table">
-                      
-                    </table>
-                    <div>Total price: $<span class="total-cart"></span></div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Order now</button>
-                  </div>
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table class="show-cart table">
+                    
+                  </table>
+                  <div>Total price: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" id="compraya" class="btn btn-primary">Comprar Ahora</button>
                 </div>
               </div>
-            </div> 
+            </div>
+          </div> 
       </main>
     <footer class="pie-pagina">
         <div class="pie-fondo-uno">
@@ -124,7 +131,7 @@
             </div>
         </div>
     </footer>
-    <div>
+    <div class="brankito">
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 <df-messenger
   chat-icon="https:&#x2F;&#x2F;cdn-icons-png.flaticon.com&#x2F;512&#x2F;2829&#x2F;2829757.png"
@@ -133,9 +140,10 @@
   agent-id="59b1d928-3910-4bca-85a6-19f89405f072"
   language-code="es"
     ></df-messenger>
-      </div> 
-</main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      </div>
+          <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="./javascript/darkmode.js"></script>
     <script src="./javascript/main.js"></script>
 </body>
 </html>
